@@ -40,6 +40,12 @@ type SearchResults struct {
 	MediaContainer SearchMediaContainer `json:"MediaContainer"`
 }
 
+type Rating struct {
+	Image string `json:"image"`
+	Type  string `json:"type"`
+	Value string `json:"value"`
+}
+
 // Metadata ...
 type Metadata struct {
 	Player                Player       `json:"Player"`
@@ -70,7 +76,7 @@ type Metadata struct {
 	ParentThumb           string       `json:"parentThumb"`
 	ParentTitle           string       `json:"parentTitle"`
 	RatingCount           int          `json:"ratingCount"`
-	Rating                float64      `json:"rating"`
+	Rating                []Rating     `json:"rating"`
 	RatingKey             string       `json:"ratingKey"`
 	SessionKey            string       `json:"sessionKey"`
 	Summary               string       `json:"summary"`
